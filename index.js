@@ -6,14 +6,13 @@ const Discord = require('discord.js'),
       random = new Chance(),
       arraySort = require('array-sort'), 
       table = require('table'), 
-      send = require('quick.hook'),
       parseArgs = require('minimist');
 const client = new Discord.Client();
 const superagent = require("superagent");
 const encode = require('strict-uri-encode');
 const snekfetch = require('snekfetch');
 const fs = require("fs");
-//const send = require("quick.hook");
+const send = require("quick.hook");
 
 let prefix = "tamo ";
 
