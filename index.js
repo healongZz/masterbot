@@ -15,7 +15,7 @@ const snekfetch = require('snekfetch');
 const fs = require("fs");
 const send = require("quick.hook");
 
-let prefix = "t.";
+let prefix = "tamo ";
 
 client.on("message", async message => {
   if(message.author.bot) return;
