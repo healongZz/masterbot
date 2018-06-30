@@ -28,7 +28,7 @@ client.on('guildMemberRemove', member => {
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity(${prefix}help, { type: 'WATCHING' })
+    client.user.setActivity(`${prefix}help`, { type: 'WATCHING' })
   });
 
 function setActivity() {
