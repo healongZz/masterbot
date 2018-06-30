@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 const send = require("quick.hook");
 
 exports.run = (client, message, Discord, prefix, args) => {
@@ -9,19 +10,17 @@ message.delete();
     let result = Math.floor((Math.random() * ratings.length));
     let user = message.mentions.users.first();
  
-    let rateEmbed = new Discord.RichEmbed()
+    let Embed = new Discord.RichEmbed()
  
     .setAuthor(message.author.username, message.author.avatarURL)
     .setColor("RANDOM")
-    .addField("Message :", args[0])
+    .addField("Answer :", args[0])
     .addField("Rating :", ratings[result]);
  
- send(message.channel, rateEmbed, {
+ send(message.channel, Embed, {
   name: "TAMOTOJI Rateing",
-  icon: "https://cdn.discordapp.com/attachments/444786595355426816/462609909075410944/images.png"
- })
-  //  message.channel.send(rateEmbed)
-
-
+  icon: 'https://cdn.discordapp.com/attachments/444786595355426816/462609909075410944/images.png'
+ });
+  
 
 }
