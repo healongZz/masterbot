@@ -13,8 +13,9 @@ const superagent = require("superagent");
 const encode = require('strict-uri-encode');
 const snekfetch = require('snekfetch');
 const fs = require("fs");
+const send = require("quick.hook");
 
-let prefix = ".";
+let prefix = "t.";
 
 client.on("message", async message => {
   if(message.author.bot) return;
