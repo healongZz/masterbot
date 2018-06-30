@@ -1,8 +1,6 @@
 const moment = require("moment");
 const mathjs = require("mathjs");
 const sm = require('string-similarity');
-const Fortnite = require('fortnite');
-const stats = new Fortnite("aff6929e-6efc-468d-9058-daba0491d714");
 const Discord = require('discord.js'),
       Chance = require('chance'),
       random = new Chance(),
@@ -11,11 +9,11 @@ const Discord = require('discord.js'),
       send = require('quick.hook'),
       parseArgs = require('minimist');
 const client = new Discord.Client();
-const botconfig = require("./botconfig.json");
 const superagent = require("superagent");
 const encode = require('strict-uri-encode');
 const snekfetch = require('snekfetch');
 const fs = require("fs");
+
 let prefix = ".";
 
 client.on("message", async message => {
