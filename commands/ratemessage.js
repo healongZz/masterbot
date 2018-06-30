@@ -1,6 +1,6 @@
 const send = require("quick.hook");
 
-exports.run = (client, message, Discord, prefix) => {
+exports.run = (client, message, Discord, prefix, args) => {
 
 message.delete();
 
