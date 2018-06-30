@@ -32,7 +32,7 @@ exports.run = (client, message, Discord, prefix) => {
 const item = quiz[Math.floor(Math.random() * quiz.length)];
      message.channel.awaitMessages(item.q);
     try {
-      const collected = await message.channel.awaitMessages(answer => item.a.includes(answer.content.toLowerCase()), options);
+      const collected =  message.channel.awaitMessages(answer => item.a.includes(answer.content.toLowerCase()), options);
       const winnerMessage = collected.first();
       return message.channel.send({embed: new Discord.RichEmbed()
                                    .setAuthor(`Winner: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
