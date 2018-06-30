@@ -1,29 +1,7 @@
-const yoMamma = require('yo-mamma').default;
-const moment = require("moment");
-const mathjs = require("mathjs");
-const sm = require('string-similarity');
-const Fortnite = require('fortnite');
-const stats = new Fortnite("aff6929e-6efc-468d-9058-daba0491d714");
-const Discord = require('discord.js'),
-      Chance = require('chance'),
-      random = new Chance(),
-      arraySort = require('array-sort'), // This will be used for sorting arrays
-      table = require('table'), // This will be used for preparing the output to a table
-      send = require('quick.hook'),
-      parseArgs = require('minimist');
+const Discord = require("discord.js");
 const client = new Discord.Client();
-const botconfig = require("./botconfig.json");
-const superagent = require("superagent");
-//const send = require("quick.hook");
-const encode = require('strict-uri-encode');
-const snekfetch = require('snekfetch');
-const fs = require("fs");
-const economy = require('discord-eco');
-const talkedRecently = new Set();
-const xp = require("./xp.json");
-const Enmap = require("enmap");
 
-let prefix = ["t ", "T ",];
+let prefix = ".";
 
 client.on("message", async message => {
   if(message.author.bot) return;
