@@ -27,7 +27,7 @@ const options = {
   errors: ["time"],
 }; 
 
-exports.run = (client, message, Discord, prefix) => {
+exports.run = (client, message, Discord, prefix, args) => {
 
 const item = quiz[Math.floor(Math.random() * quiz.length)];
      message.channel.awaitMessages(item.q);
