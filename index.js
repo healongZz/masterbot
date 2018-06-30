@@ -16,7 +16,7 @@ const superagent = require("superagent");
 const encode = require('strict-uri-encode');
 const snekfetch = require('snekfetch');
 const fs = require("fs");
-let prefix = ["t ", "T "];
+let prefix = ".";
 
 client.on("message", async message => {
   if(message.author.bot) return;
@@ -46,16 +46,7 @@ client.on('ready', () => {
     client.user.setActivity(`${prefix}help`, { type: 'WATCHING' })
   });
 
-function setActivity() {
-    var Gameinfo = [`discord.gg/ZWWD7zT`, `${prefix}help`, `TAMOTOJI`]
-    var info = Gameinfo[Math.floor(Math.random() * Gameinfo.length)]; //Random Math to set the setGame to something in the GameInfo array
-    client.user.setActivity(info) // "playing Game" '...' Sets the setGame to what the info Random math picked from the GameInfo Array
-    if (config.debugMode === "1") {
-        console.log(`[ LOG ] set Activity set to ( ${info} )`) //Logs to console what the setGame was set as.
-    }
 
-}
-setInterval(setActivity, 900 * 60 * 2)
 
 
 
