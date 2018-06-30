@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-let prefix = ".";
+let prefix = ["t ", "T "];
 
 client.on("message", async message => {
   if(message.author.bot) return;
