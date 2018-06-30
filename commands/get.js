@@ -1,7 +1,11 @@
 const snekfetch = require('snekfetch');
 const Discord = require("discord.js");
+const encode = require('strict-uri-encode');
 
 exports.run = (client, message, Discord, prefix) => {
+
+  const args = message.content.slice(prefix.length).split(/ +/);
+    const commandName = args.shift().toLowerCase();
 
   let [title, contents] = args.join(" ").split("|");
   if(!contents) {
