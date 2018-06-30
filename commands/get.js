@@ -21,7 +21,7 @@ exports.run = (client, message, Discord, prefix) => {
   snekfetch.get(url)
    .then(r=>message.channel.send("", {files:[{attachment: r.body}]}));
   message.delete(5000);
-  message.react("445426199892590602");
+
 
 
 
