@@ -24,7 +24,7 @@ client.on("message", async message => {
     
     try {
       let commandFile = require(`./commands/${command}.js`);
-      commandFile.run(client, message, Discord, prefix, );
+      commandFile.run(client, message, Discord, prefix, args, );
     } catch (err) {
       console.error(err);
     }
