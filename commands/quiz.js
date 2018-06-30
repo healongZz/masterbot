@@ -23,7 +23,7 @@ const quiz =  [{ q: "Name a soft drink brand.", a: ["pepsi", "coke", "rc", "7up"
 { q: "'OS' computer abbreviation usually means?", a: ["operating system"] }];
 const options = {
   max: 1,
-  time: 30050,
+  time: 60050,
   errors: ["time"],
 }; 
 
@@ -38,7 +38,7 @@ const item = quiz[Math.floor(Math.random() * quiz.length)];
                                    .setAuthor(`Winner: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
                                    .setTitle(`Correct Answer: \`${winnerMessage.content}\``)
                                    .setFooter(`Question: ${item.q}`)
-                                   .setColor(message.guild.me.displayHexColor)
+                                   //.setColor(message.guild.me.displayHexColor)
                                   })
     } catch (_) {
       return message.channel.send({embed: new Discord.RichEmbed()
