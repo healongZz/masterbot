@@ -1,5 +1,6 @@
 const moment = require("moment");
 const Discord = require('discord.js');
+const send = require("quick.hook");
 
 exports.run = (client, message, Discord, prefix) => {
 
@@ -23,9 +24,11 @@ exports.run = (client, message, Discord, prefix) => {
 		.addField("Created At:", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
 		.addField("Joined Server:", `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
 		.setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
-     message.channel.send({embed});
+    // message.channel.send({embed});
    
-
+ send(message.channel, embed, {
+   name: "UserInfo:"
+ })
 
 
 
