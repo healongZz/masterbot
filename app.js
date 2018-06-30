@@ -64,15 +64,6 @@ function setActivity() {
 }
 setInterval(setActivity, 900 * 60 * 2)
 
-  client.on("message", async message => {
-    if(message.author.bot) return;
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
 
-
-
-
-
-});
 
 client.login(process.env.BOT_TOKEN);
