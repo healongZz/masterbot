@@ -13,7 +13,7 @@ const superagent = require("superagent");
 const encode = require('strict-uri-encode');
 const snekfetch = require('snekfetch');
 const fs = require("fs");
-const send = require("quick.hook");
+//const send = require("quick.hook");
 
 let prefix = "tamo ";
 
