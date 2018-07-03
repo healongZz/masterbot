@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const gifSearch = require("gif-search");
 
-exports.run = (client, message, Discord, prefix) => {
+exports.run = (client, message, Discord, prefix, args) => {
 
 
     if (!args[0]) return message.channel.send("`"+config.prefix+"gif <gifName> || Ex : gif gay`");
