@@ -27,7 +27,8 @@ exports.run = (client, message, Discord, prefix) => {
     
    
  send(message.channel, embed, {
-   name: "UserInfo :"
+   name: "UserInfo :",
+   icon: "https://cdn.discordapp.com/attachments/442941497319489566/463614794151231493/user_information-512.png"
  })
 
 
