@@ -4,7 +4,7 @@ const gifSearch = require("gif-search");
 exports.run = (client, message, Discord, prefix, args) => {
 
 
-    if (!args[0]) return message.channel.send("`"+config.prefix+"gif <gifName> || Ex : gif gay`");
+    if (!args[0]) return message.channel.send("`"+prefix+"gif <gifName> || Ex : gif gay`");
 
     gifSearch.random(args[0]).then(
         gifUrl => {
@@ -13,6 +13,7 @@ exports.run = (client, message, Discord, prefix, args) => {
         var embed = new Discord.RichEmbed()
             .setColor(`#${randomcolor}`)
             .setImage(gifUrl)
+            .setFooter("Search By : +message.author.username+", message.author.avatarURL)
         message.channel.send(embed);
     });
  
