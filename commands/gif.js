@@ -13,7 +13,7 @@ exports.run = (client, message, Discord, prefix, args) => {
         var embed = new Discord.RichEmbed()
             .setColor(`#${randomcolor}`)
             .setImage(gifUrl)
-            .setFooter("Search By : +message.author.username+", message.author.avatarURL)
+            .setFooter("Search By : "+message.author.username+"", message.author.avatarURL)
         message.channel.send(embed);
     });
  
