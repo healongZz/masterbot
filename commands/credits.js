@@ -1,6 +1,6 @@
 exports.run = (client, message, Discord, prefix, args) => {
 
-    let bicon = bot.user.displayAvatarURL;
+    let bicon = client.user.displayAvatarURL;
 	let embed = new Discord.RichEmbed()
         .setColor("#9B59B6")
         .setThumbnail(bicon)
