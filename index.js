@@ -17,6 +17,9 @@ const send = require("quick.hook");
 let prefix = "tamo " || "tamotoji";
 
 client.on("message", async message => {
+if(message.content.startsWith("@TAMOTOJI")) {
+	message.channel.send("BOT Prefix is : `+prefix+`");
+}
   if(message.author.bot) return;
   if(message.content.startsWith(prefix)){
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
