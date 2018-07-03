@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 exports.run = (client, message, Discord, prefix, args) => {
 
 	const embed = new Discord.RichEmbed()
-		.setAuthor(message.guild.name, message.guild.iconURL())
+		.setAuthor(message.guild.name, message.guild.iconURL)
 		.setColor('#0099ff')
 		.setThumbnail(message.guild.iconURL())
 		.addField('Members', `**${message.guild.memberCount}**`, true)
