@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const random = new Chance();
+const random = new chance();
 
 exports.run = (client, message, Discord, prefix, args) => {
 
