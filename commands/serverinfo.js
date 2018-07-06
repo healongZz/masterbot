@@ -1,5 +1,7 @@
 exports.run = (client, message, Discord, prefix) => {
 
+
+      const List = message.guild.emojis.map(e => e.toString()).join(" ");
       let online = message.guild.members.filter(member => member.user.presence.status !== 'offline');
       let day = message.guild.createdAt.getDate()
       let month = 1 + message.guild.createdAt.getMonth()
@@ -20,6 +22,7 @@ exports.run = (client, message, Discord, prefix) => {
        .addField("Online", online.size, true)
      //  .setImage("https://cdn.discordapp.com/attachments/443665749656207360/445222446719827968/ServerInfo_-_Mirai.png")
        .addField("Created At", message.member.joinedAt, true)
+       .addField("ServerEmoji :", List)
 
        message.channel.send(serverembed);
     
