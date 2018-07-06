@@ -22,7 +22,7 @@ exports.run = (client, message, Discord, prefix) => {
        .addField("Online", online.size, true)
      //  .setImage("https://cdn.discordapp.com/attachments/443665749656207360/445222446719827968/ServerInfo_-_Mirai.png")
        .addField("Created At", message.member.joinedAt, true)
-       .addField("ServerEmoji :", List)
+       .setDescription("ServerEmoji :", List)
 
        message.channel.send(serverembed);
     
