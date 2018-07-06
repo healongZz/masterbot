@@ -1,6 +1,9 @@
+const Discord = require("discord.js");
+const send = require("quick.hook");
+
 exports.run = (client, message, Discord, prefix) => {
 
-message.delete();
+message.delete(900);
 let message = message.channel.send("http://tamotoji.tk");
 send(message.channel, message, {
 name: "TAMOTOJI HangOut :",
