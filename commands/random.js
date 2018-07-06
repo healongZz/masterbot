@@ -1,5 +1,10 @@
-const Discord = require("discord.js");
-const random = new chance();
+const Discord = require('discord.js'),
+      Chance = require('chance'),
+      random = new Chance(),
+      arraySort = require('array-sort'),
+      table = require('table'), 
+      send = require('quick.hook'),
+      parseArgs = require('minimist');
 
 exports.run = (client, message, Discord, prefix, args) => {
 
