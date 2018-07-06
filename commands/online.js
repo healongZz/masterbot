@@ -5,7 +5,7 @@ exports.run = (client, message, Discord, prefix, args) => {
 	const embed = new Discord.RichEmbed()
 		.setAuthor(message.guild.name, message.guild.iconURL)
 		.setColor('#0099ff')
-		.setThumbnail(message.guild.iconURL())
+		.setThumbnail(message.guild.iconURL)
 		.addField('Members', `**${message.guild.memberCount}**`, true)
 		.addBlankField(true)
 		.addField('Humans', `**${message.guild.members.filter(member => !member.user.bot).size}**`, true)
