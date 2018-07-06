@@ -7,7 +7,7 @@ message.delete(1000);
 const embed = new Discord.RichEmbed()
 .setColor("#FFFFFF")
 .setTitle(`${prefix}help || Commands List `)
-.setDescription("`userinfo`  `serverinfo`  `avatar`  `botstats`")
+.setDescription("`userinfo`  `serverinfo`  `avatar`  `botstats`  `online`  `emoji` `get`  `gif`")
 .setFooter("Power By : TAMOTOJI HangOut Server", message.guild.iconURL)
 send(message.channel, embed, {
  name: "Commands List:",
