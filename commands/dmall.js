@@ -10,11 +10,11 @@ exports.run = (client, message, Discord, prefix, args) => {
         message.guild.member(player).send({embed: {
           color: 0x00c1c1,
           title: `${message.guild.name}`,
-          description: `${Alert}`
+          description: `${DMALL}`
         }});
     });
 
-    message.channel.send("All players in this discord server have got your alert");
+    message.channel.send("All players in this discord server have got your anwer");
 
 
 
