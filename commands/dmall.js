@@ -8,13 +8,13 @@ exports.run = (client, message, Discord, prefix, args) => {
 
     message.guild.members.forEach((player) => {
         message.guild.member(player).send({embed: {
-          color: 0x00c1c1,
+          color: 0xffffff,
           title: `${message.guild.name}`,
           description: `${DMALL}`
         }});
     });
 
-    message.channel.send("All players in this discord server have got your anwer");
+    message.channel.send("<@"+message.author.id+"> Your Dm Has Been Send To Player !").then(m => m.delete(1000));
 
 
 
