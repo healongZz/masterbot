@@ -14,7 +14,7 @@ const snekfetch = require('snekfetch');
 const fs = require("fs");
 const send = require("quick.hook");
 
-let prefix = "tamo " || "tamotoji";
+let prefix = "long " || "tamotoji";
 
 client.on("message", async message => {
 if(message.content.startsWith("@TAMOTOJI")) {
